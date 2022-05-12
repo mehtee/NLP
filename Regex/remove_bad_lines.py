@@ -34,7 +34,6 @@ def remove_lines_without_punctuations(text_to_process: str) -> str:
 
     # Converting the given string to a list of splitted strings separated by "\n":
     splitted_string_list: List[str] = split(delimiters, text_to_process)
-    print(splitted_string_list)
     # After processing each string ended by "\n" in the list, if it would be ended with a punctuation, we add to the
     # end of this string:
     after_processing_text: str = ""
