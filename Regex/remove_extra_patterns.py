@@ -3,8 +3,8 @@ import sys
 
 
 def remove_pattern(pattern: str, text: str) -> str:
-    regex_to_remove_url = pattern
-    removed_urls_text = re.sub(regex_to_remove_url, "", text)
+    regex_to_remove = pattern
+    removed_urls_text = re.sub(regex_to_remove, "", text)
     return removed_urls_text
 
 
@@ -24,8 +24,8 @@ def remove_account_nums(text: str) -> str:
 
 
 def remove_email(text: str) -> str:
-    regex_to_remove_account = r"[a-zA-Z0-9]+@[a-z]+\.[A-Za-z]{2,3}"
-    return remove_pattern(regex_to_remove_account, text)
+    regex_to_remove_email = r"[a-zA-Z0-9]+@[a-z]+\.[A-Za-z]{2,3}"
+    return remove_pattern(regex_to_remove_email, text)
 
 
 def remove_extra_patterns(text_to_process: str) -> str:
